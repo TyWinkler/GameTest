@@ -7,9 +7,6 @@ import javax.imageio.ImageIO;
 
 public class Images {
 
-	private static final long serialVersionUID = 4360529904558306174L;
-	
-	
 	public static Image player;
 	
 	Images(){
