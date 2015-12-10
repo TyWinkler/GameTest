@@ -4,6 +4,8 @@ import java.awt.Graphics;
 
 public abstract class GameObject {
 	
+	public static int playerX, playerY;
+	
 	protected int x, y;
 	protected ID id;
 	

@@ -9,18 +9,21 @@ public class Game extends Canvas implements Runnable {
 
 	private static final long serialVersionUID = 7678291831619868750L;
 
-	public static final int WIDTH = 800, HEIGHT = WIDTH / 12 * 9;
+	public static final int WORLDWIDTH = 800, WORLDHEIGHT = WORLDWIDTH / 12 * 9;
+	public static final int WIDTH = 352, HEIGHT = 352;
 	private Thread thread;
 	private boolean running = false;
 	
 	private Handler handler;
 	
 	public Game(){
-		new Window(WIDTH, HEIGHT, "GameTest", this);
-		
 		handler = new Handler();
+		this.addKeyListener(new KeyInput(handler));
 		
-		handler.addObject(new Player(100, 100, ID.Player));
+		Window window = new Window(WIDTH, HEIGHT, "GameTest", this);
+
+		handler.addObject(new Player(160, 160, ID.Player));
+		handler.addObject(new Enemy(192, 192, ID.Enemy));
 	}
 	
 	public synchronized void start() {
@@ -95,5 +98,10 @@ public class Game extends Canvas implements Runnable {
 		new Game();
 	}
 
+	public static int clamp(int var, int min, int max){
+		if(var >= max) return max;
+		else if (var <= min) return min;
+		else return var;
+	}
 
 }
