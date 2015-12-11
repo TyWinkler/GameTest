@@ -22,6 +22,8 @@ public class Game extends Canvas implements Runnable {
 		
 		Window window = new Window(WIDTH, HEIGHT, "GameTest", this);
 
+		new World(handler);
+		
 		handler.addObject(new Player(160, 160, ID.Player));
 		handler.addObject(new Enemy(192, 192, ID.Enemy));
 	}

@@ -16,14 +16,14 @@ public class Handler {
 	
 	public void render(Graphics g){
 		for(WorldObject world : world){
-			if(world.getX() > GameObject.playerX - 160 && world.getX() < GameObject.playerX + 160 &&
-			   world.getY() > GameObject.playerY - 160 && world.getY() < GameObject.playerY + 160){
+			if(world.getX() > GameObject.playerX - 192 && world.getX() < GameObject.playerX + 192 &&
+			   world.getY() > GameObject.playerY - 192 && world.getY() < GameObject.playerY + 192){
 				world.render(g);
 			}
 		}
 		for(GameObject object : object){
-			if(object.getX() > GameObject.playerX - 160 && object.getX() < GameObject.playerX + 160 &&
-			   object.getY() > GameObject.playerY - 160 && object.getY() < GameObject.playerY + 160){
+			if(object.getX() > GameObject.playerX - 192 && object.getX() < GameObject.playerX + 192 &&
+			   object.getY() > GameObject.playerY - 192 && object.getY() < GameObject.playerY + 192){
 				object.render(g);
 			}
 		}

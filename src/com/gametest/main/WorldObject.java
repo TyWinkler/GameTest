@@ -6,6 +6,11 @@ public abstract class WorldObject {
 
 	protected int x, y;
 	
+	public WorldObject(int x, int y){
+		this.x = x;
+		this.y = y;
+	}
+	
 	public abstract void render(Graphics g);
 	
 	public boolean canWalkThrough(){
